@@ -2,70 +2,71 @@
 'use strict';
 (function () {
 
-    let jsonData = {
-        "Protocol": {
-            "ProtocolId": 1,
-            "Name": "Cell growth 2",
-            "Description": "Second test"
-        },
-        "Elements": [
-            {
-                "ProtocolElementId": 1,
-                "Type": "Pump",
-                "Configuration": {
-                    "Type": "Salt Water",
-                    "Value": 10,
-                    "Direction": "In"
-                },
-                "Start": 120,
-                "Duration": 20
-            },
-            {
-                "ProtocolElementId": 2,
-                "Type": "Pump",
-                "Configuration": {
-                    "Type": "Water",
-                    "Value": "5",
-                    "Direction": "Out"
-                },
-                "Start": 2590,
-                "Duration": 10
-            },
-            {
-                "ProtocolElementId": 3,
-                "Type": "Temperature",
-                "Configuration": {
-                    "Value": "37"
-                },
-                "Start": 0,
-                "Duration": 3600
-            },
-            {
-                "ProtocolElementId": 4,
-                "Type": "Temperature",
-                "Configuration": {
-                    "Value": "20"
-                },
-                "Start": 200,
-                "Duration": 3600
-            }
-            ,
-            {
-                "ProtocolElementId": 5,
-                "Type": "Temperature",
-                "Configuration": {
-                    "Value": "30"
-                },
-                "Start": 800,
-                "Duration": 3600
-            }
+    // let jsonData = {
+    //     "Protocol": {
+    //         "ProtocolId": 1,
+    //         "Name": "Cell growth 2",
+    //         "Description": "Second test"
+    //     },
+    //     "Elements": [
+    //         {
+    //             "ProtocolElementId": 1,
+    //             "Type": "Pump",
+    //             "Configuration": {
+    //                 "Type": "Salt Water",
+    //                 "Value": 10,
+    //                 "Direction": "In"
+    //             },
+    //             "Start": 120,
+    //             "Duration": 20
+    //         },
+    //         {
+    //             "ProtocolElementId": 2,
+    //             "Type": "Pump",
+    //             "Configuration": {
+    //                 "Type": "Water",
+    //                 "Value": "5",
+    //                 "Direction": "Out"
+    //             },
+    //             "Start": 2590,
+    //             "Duration": 10
+    //         },
+    //         {
+    //             "ProtocolElementId": 3,
+    //             "Type": "Temperature",
+    //             "Configuration": {
+    //                 "Value": "37"
+    //             },
+    //             "Start": 0,
+    //             "Duration": 3600
+    //         },
+    //         {
+    //             "ProtocolElementId": 4,
+    //             "Type": "Temperature",
+    //             "Configuration": {
+    //                 "Value": "20"
+    //             },
+    //             "Start": 200,
+    //             "Duration": 3600
+    //         }
+    //         ,
+    //         {
+    //             "ProtocolElementId": 5,
+    //             "Type": "Temperature",
+    //             "Configuration": {
+    //                 "Value": "30"
+    //             },
+    //             "Start": 800,
+    //             "Duration": 3600
+    //         }
             
-        ]
-    };
+    //     ]
+    // };
+
+    var jsonData = d3.json("http://145.131.29.141:8080");
 
     let min = jsonData.Elements.sort((b, c) => (b.Start - c.Start))[0].Start;
     let max = jsonData.Elements.sort((b, c) => ((b.Start + b.Duration) - (c.Start + c.Duration)))[jsonData.Elements.length - 1].Start + jsonData.Elements.sort((b, c) => ((b.Start + b.Duration) - (c.Start + c.Duration)))[jsonData.Elements.length - 1].Duration;
-    console.log(max);
     let o2Data = loadDataBytype('Elements', 'o2'),
         co2Data = loadDataBytype('Elements', 'co2'),
         n2Data = loadDataBytype('Elements', 'n2'),
