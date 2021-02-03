@@ -1,0 +1,343 @@
+h2 {
+    font-size: 1em;
+}
+
+.table_row {
+    display: table;
+    table-layout: fixed;
+    width: 99.4%;
+}
+
+.row1, .row2, .row3, .row4, .row5 {
+    border-bottom: 1px solid #ccc;
+}
+
+.cc {
+    width: 140px;
+}
+
+.last-cell {
+    width: 4%;
+}
+
+.timeline-cell .table_cell.pvc b::before,
+.timeline-cell .table_cell.pvc::after {
+    content: '';
+    position: absolute;
+    border-right: 1px solid red;
+    width: 0px;
+    height: 150vh;
+    opacity: 0.3;
+    top: 47px;
+    margin-left: 6px;
+}
+
+.table_cell {
+    display: table-cell;
+    vertical-align: middle;
+    /* border-left: 1px solid #ccc;*/
+}
+
+.water-butt,
+.saltWater-butt,
+#fluid {
+    width: 90%;
+    margin-left: 10%;
+}
+
+span.funct-element::before {
+    content: "\0192";
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 2.2em;
+    cursor: pointer;
+}
+
+.xl-btn {
+    width: 100%;
+    text-align: left;
+}
+
+.funct-text {
+    display: inline-block;
+    line-height: 15px;
+    font-size:14px;
+}
+
+.env-cell .c1 {
+    width: 12.25%;
+}
+
+.env-cell .g-c {
+    width: 75.25%;
+}
+
+.temp-cell .c1 {
+    width: 8%;
+}
+
+.pump-cell button img {
+    width: 16px;
+}
+
+.img-cell img {
+    max-width: 100%;
+    height:98px;
+}
+
+.table_cell b {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.bs-box {
+    padding: 10px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    text-align: center;
+    width: 80%;
+    margin-left: 12.5%;
+    height:118px;
+}
+/* temperature line series styles */
+.line {
+    fill: none;
+    /* stroke: steelblue; */
+    stroke-width: 2px;
+}
+
+.grid line {
+    stroke: lightgrey;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: steelblue;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+
+.tooltip-date, .tooltip-value {
+    font-weight: bold;
+}
+/* dialog modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+.imageSection{
+    position:absolute;
+    top:140px;
+}
+
+.funSection {
+    position:absolute;
+    top:280px;
+}
+
+.pumpSection{
+    position:absolute;
+    top:345px;
+    border-bottom:1px solid #ccc;
+}
+
+#pumpElementAdded {
+    position:absolute;
+    top:423px;
+    width:50px;
+    left:160px;
+    margin-left: unset;
+}
+
+.pumpClassAdded{
+    position:absolute;
+    top:8px;
+    width:50px;
+}
+
+.img-cell img{
+    cursor:pointer;
+}
+
+.funcBox, .funct-element{
+    cursor:pointer;
+}
+
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    left: 25%;
+    top: 20%;
+    border-radius: 5px;
+    background-color: #fefefe;
+    width: 55%;
+}
+
+#funcList, #environmentSel{
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}
+
+/* The Close Button */
+/* .close {
+    color: white;
+    float: right;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  } */
+/* span.close{font-size: 28px;}
+
+  
+  .modal-header {
+    padding: 2px 16px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .modal-body {padding: 2px 16px;min-height: 100px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    border-top: 1px solid #ccc;
+  } */
+#modalContent img {
+    max-width: 100%;
+}
+/* font awesome */
+.status-down {
+    transform: rotate(90deg);
+    font-size: 21px;
+    color: darkblue;
+}
+
+.status-up {
+    transform: rotate(-90deg);
+    font-size: 21px;
+    color: darkred;
+}
+
+.add-button {
+    color: gray;
+    border: none;
+    background-color: inherit;
+    float: right;
+}
+
+    .add-button:hover {
+        color: #5d5d5d;
+        background-color: rgb(239, 239, 239);
+    }
+
+.first-column {
+    width: 140px;
+    display: inline-flex;
+}
+
+.title {
+    width: 100%;
+    padding-left: 6px;
+}
+
+.sup-script {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+/* Add Animation */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/* my css */
+#svgArea {
+    width: 100%;
+    height: 1000px;
+}
+
+.leftLabel {
+    border-right: 1px solid #ccc;
+}
+
+.ccc {
+    width: 15%;
+}
+
+.ccc1 {
+    margin-right: 20px;
+}
+
+.svgMoved {
+    overflow-x: hidden;
+}
+
+.leftLabel > div {
+    height: 120px;    
+    border-bottom: 1px solid #ccc;
+}
+
+#temperatureSeries, #o2Series, #co2Series, #n2Series, #humiditySeries {
+    width: 100%;
+    height: 150px;
+}
+
+    #co2Series .line {
+        stroke: red;
+    }
+
+    #n2Series .line {
+        stroke: violet;
+    }
+
+    #humiditySeries .line {
+        stroke: cadetblue;
+    }
+#funcElementAdded {
+    position:absolute;
+    top:183px;
+    width:80px;
+    left:160px;
+    margin-left: unset;
+}
